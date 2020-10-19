@@ -15,6 +15,7 @@ Set-Alias find Get-Item
 
 function Get-AllItems { Get-ChildItem -Force "$args" }
 Set-Alias ll Get-AllItems
+
 function New-ItemDirectory { New-Item -Type Directory -Name "$args" }
 Set-Alias nd New-ItemDirectory
 
