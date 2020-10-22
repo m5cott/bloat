@@ -21,3 +21,9 @@ Set-Alias nd New-ItemDirectory
 
 function New-ItemFile { New-Item -Type File -Name "$args"}
 Set-Alias nf New-ItemFile
+
+function shasum { certutil.exe -hashfile "$args" SHA256 }
+Set-Alias sha256 shasum
+
+function md5sum { certutil.exe -hashfile "$args" MD5 }
+Set-Alias md5 md5sum
