@@ -21,7 +21,7 @@ Set-Alias nd New-ItemDirectory
 function New-ItemFile { New-Item -Type File -Name "$args"}
 Set-Alias nf New-ItemFile
 
-# Elevating privileges in Powershell 7
+# Elevating privileges on Linux in Powershell 7
 if ($isLinux)
 {
     function Get-Sudo { & /usr/bin/env sudo pwsh -command "& $args" }
@@ -34,4 +34,7 @@ if ($isWindows) {
     
     function md5sum { certutil.exe -hashfile "$args" MD5 }
     Set-Alias md5 md5sum
+
+    function New-Password { C:\Users\mcsco\Projects\github\m5cott\myUtils\getpw\src\getpw.exe $args[0] $args[1] }
+    Set-Alias getpw New-Password
 }
