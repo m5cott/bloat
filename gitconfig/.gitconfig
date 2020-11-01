@@ -1,0 +1,9 @@
+[user]
+	name = m5cott
+	email = mcscottbsn@outlook.com
+[commit]
+  template = ~/.gitmessage
+[color]
+	ui = true
+[core]
+	editor = code --wait
