@@ -1,8 +1,7 @@
 #!/bin/bash
 
-configsDir=$(pwd)
-
 function linkDotfiles {
+    configsDir=$(pwd)
     dest="${HOME}/${1}"
     dateStr=$(date +%Y-%m-%d-%H%M)
 
@@ -23,13 +22,13 @@ function linkDotfiles {
         fi
 
     echo "Creating new symlink: ${dest}"
-    ln -s ${dotfilesDir}/${1} ${dest}
+    ln -s ${configsDir}/${1} ${dest}
 }
 
-linkDotfiles bash/.bashrc
-linkDotfiles bash/.bash_aliases
-linkDotfiles gitconfig/.gitconfig
-linkDotfiles gitconfig/.gitmessage
-linkDotfiles scripts
-linkDotfiles vim/.vimrc
-linkDotfiles vim/.vim
+cd bash && linkDotfiles .bashrc
+linkDotfiles .bash_aliases
+cd ../gitconfig && linkDotfiles .gitconfig
+linkDotfiles .gitmessage
+cd .. && linkDotfiles scripts
+cd vim && linkDotfiles .vimrc
+linkDotfiles .vim
