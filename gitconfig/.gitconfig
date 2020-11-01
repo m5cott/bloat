@@ -2,7 +2,7 @@
 	name = m5cott
 	email = mcscottbsn@outlook.com
 [commit]
-  template = ~/.gitmessage
+	template = ~/.gitmessage
 [color]
 	ui = true
 [core]
