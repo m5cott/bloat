@@ -37,7 +37,7 @@ filetype off
 filetype plugin on
 syntax on
 
-"set background=dark
+set background=dark
 
 " Color scheme
 " Source - https://github.com/rafi/awesome-vim-colorschemes
@@ -52,7 +52,8 @@ syntax on
 "colorscheme molokai
 "colorscheme solarized8
 "colorscheme solarized8_flat
-colorscheme wombat256mod
+"colorscheme wombat256mod
+colorscheme gruvbox
 
 " Enable to use mouse in vim
 "if has('mouse')
