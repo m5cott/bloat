@@ -9,6 +9,7 @@
 # Alias - Make Terminal Great Again!
 # ------------------------------------------------------------------------
 
+alias sudo='sudo '
 alias cp='cp -iv'   # Write Prompt to the standard error output & verbose
 alias mv='mv -iv'   # Write Prompt to the standard error output & verbose
 alias mkdir='mkdir -pv' # Create intermediate dir as required & verbose
