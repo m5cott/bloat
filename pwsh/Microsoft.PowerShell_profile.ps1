@@ -21,6 +21,20 @@ Set-Alias nd New-ItemDirectory
 function New-ItemFile { New-Item -Type File -Name "$args"}
 Set-Alias nf New-ItemFile
 
+function Set-GitDir { Set-Location $HOME\Projects\github\m5cott }
+Set-Alias gd Set-GitDir
+
+function Set-HomeDir { Set-Location $HOME }
+Set-Alias h Set-HomeDir
+
+function Set-DocDir { Set-Location $HOME\OneDrive\Documents }
+Set-Alias d Set-DocDir
+
+function Set-DowDir { Set-Location $HOME\Downloads }
+Set-Alias dl Set-DowDir
+
+Set-Alias c Clear-Host
+
 # Elevating privileges on Linux in Powershell 7
 if ($isLinux)
 {
