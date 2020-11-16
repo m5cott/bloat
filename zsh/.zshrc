@@ -1,3 +1,13 @@
+###################################################
+ # Name: .zshrc
+ # Directory: /home/$USER/.zshrc
+ # Purpose: personalized zshrc
+ # Author: Michael Scott (m5cott)
+ # Created: 2020-11-15
+ # Credit: Luke Smith (lukesmith.xyz)
+ # License: MIT License
+###################################################
+
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -74,15 +84,6 @@ bindkey '^[[P' delete-char
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
-###################################################
- # Name: .zshrc
- # Directory: /home/$USER/.zshrc
- # Purpose: personalized zshrc
- # Author: Michael Scott (m5cott)
- # Created: 2020-11-15
- # Credit: Luke Smith (lukesmith.xyz)
- # License: MIT License
-###################################################
 
 # Collapsing Directories
 function spwd {
