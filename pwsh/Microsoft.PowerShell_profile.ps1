@@ -35,6 +35,19 @@ Set-Alias dl Set-DowDir
 
 Set-Alias c Clear-Host
 
+function Get-GitAdd { git.exe add "$args" }
+Set-Alias gta Get-GitAdd
+
+function Get-GitCommit { git.exe commit -m "$args" }
+Set-Alias gtc Get-GitCommit
+
+function Get-GitPush { git.exe push }
+Set-Alias gtp Get-GitPush
+
+function Get-GitStatus { git.exe status }
+Set-Alias gts Get-GitStatus
+
+
 # Elevating privileges on Linux in Powershell 7
 if ($isLinux)
 {
@@ -49,6 +62,6 @@ if ($isWindows) {
     function md5sum { certutil.exe -hashfile "$args" MD5 }
     Set-Alias md5 md5sum
 
-    function New-Password { C:\Users\mcsco\Projects\github\m5cott\myUtils\getpw\src\getpw.exe $args[0] $args[1] }
+    function New-Password { C:\Users\mcsco\Projects\github\m5cott\my-utils\getpw\src\getpw.exe $args[0] $args[1] }
     Set-Alias getpw New-Password
 }
