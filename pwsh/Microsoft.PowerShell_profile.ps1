@@ -44,8 +44,9 @@ Set-Alias gtc Get-GitCommit
 function Get-GitPush { git.exe push }
 Set-Alias gtp Get-GitPush
 
-function Get-GitStatus { git.exe status }
-Set-Alias gts Get-GitStatus
+# Disabled at this time. Creating git status alias breaks posh-git functionality
+#function Get-GitStatus { git.exe status }
+#Set-Alias gts Get-GitStatus
 
 
 # Elevating privileges on Linux in Powershell 7
