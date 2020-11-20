@@ -13,6 +13,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'ap/vim-css-color'
+Plug 'alvan/vim-closetag'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Spaces & Tabs
