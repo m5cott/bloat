@@ -1,5 +1,5 @@
 " .vimrc by Michael Scott
-" Updated on 09.02.2020
+" Updated on 11/20/2020
 "
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -8,13 +8,19 @@ autocmd! bufwritepost .vimrc source %
 "set pastetoggle=<F2>
 "set clipboard=unnamed
 
+"vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
+Plug 'ap/vim-css-color'
+call plug#end()
+
 " Spaces & Tabs
 set tabstop=4 " number of visual spaces per TAB
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
 
 " UI Config https://dougblack.io/words/a-good-vimrc.html
-"execute pathogen#infect()
 set number  " show line numbers
 set relativenumber
 set so=10
@@ -43,16 +49,6 @@ set background=dark
 " Source - https://github.com/rafi/awesome-vim-colorschemes
 " location ~/.vim/colors
 
-"colorscheme atom
-"colorscheme badwolf
-"colorscheme dracula
-"colorscheme github
-"colorscheme jellybeans
-"colorscheme minimalist
-"colorscheme molokai
-"colorscheme solarized8
-"colorscheme solarized8_flat
-"colorscheme wombat256mod
 colorscheme gruvbox
 
 " Enable to use mouse in vim
