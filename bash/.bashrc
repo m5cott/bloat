@@ -66,13 +66,17 @@ fi
 export PATH=${PATH}:~/scripts
 
 # Powerline Go Pretty Prompt
-GOPATH=$HOME/go
-function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $?)"
-}
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+#GOPATH=$HOME/go
+#function _update_ps1() {
+#    PS1="$($GOPATH/bin/powerline-go -error $?)"
+#}
+#if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
+
+# nice colors v1
+export PROMPT_DIRTRIM=3
+export PS1="\[\e[31m\][\[\e[m\]\[\e[33m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[34m\]\h\[\e[m\] \[\e[35m\]\w\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "
 
 # setup nice colors
 #export PROMPT_DIRTRIM=3
